@@ -1,7 +1,12 @@
 """
 Python test suite
 
-using unittest and coverage
+requires unittest and coverage
+
+
+Usage:
+ $ python testsuite.py [modules]
+
 
 TODO:
 * make coverage optional
@@ -12,6 +17,13 @@ TODO:
 import sys
 import unittest
 import coverage
+
+
+def main(args):
+	modules = []
+	if len(args) > 1:
+		modules = args[1:]
+	return run(modules)
 
 
 def run(modules):
@@ -55,5 +67,5 @@ def reportCoverage(modules):
 
 
 if __name__ == "__main__":
-	status = run(sys.argv[1:])
+	status = main(sys.argv)
 	sys.exit(not status)

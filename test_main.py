@@ -3,24 +3,24 @@ sample test module
 """
 
 
-import unittest
-
 import main
 
+import unittest
 
-class mainTestCase(unittest.TestCase):
+
+class dummyTestCase(unittest.TestCase):
 	def setUp(self):
 		pass
 
 	def tearDown(self):
 		pass
 
-	def testDummyReturnsNone(self):
+	def testReturnsNone(self):
 		"""dummy returns None by default"""
+		actual = main.dummy()
 		expected = None
-		self.assertEqual(expected, main.dummy())
+		self.assertEqual(actual, expected)
 
 
 if __name__ == "__main__":
 	unittest.main()
-

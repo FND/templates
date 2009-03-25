@@ -23,10 +23,10 @@ import sys
 # <internal functions & classes>
 
 
-def main(argv=None):
+def main(args=None):
 	return True
 
 
 if __name__ == "__main__":
-	status = not main(sys.argv) # convert boolean
+	status = not main(sys.argv)
 	sys.exit(status)

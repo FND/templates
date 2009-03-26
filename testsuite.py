@@ -3,10 +3,8 @@ Python test suite
 
 requires unittest and coverage
 
-
 Usage:
  $ python testsuite.py [modules]
-
 
 TODO:
 * make coverage optional
@@ -39,10 +37,12 @@ def run(modules):
 	testModules = ["test_" + module for module in modules]
 	initCoverage()
 	suite = unittest.TestLoader().loadTestsFromNames(testModules)
-	runner = unittest.TextTestRunner(sys.stdout, verbosity = 2)
+	runner = unittest.TextTestRunner(sys.stdout, verbosity=2)
 	results = runner.run(suite)
 	endCoverage()
+	print "\n%s\n" % ("=" * 70)
 	reportCoverage(modules)
+	print
 	return results.wasSuccessful()
 
 
@@ -63,7 +63,7 @@ def reportCoverage(modules):
 	@param modules (list): module names
 	"""
 	modules = [__import__(module) for module in modules]
-	coverage.report(modules, ignore_errors = 0, show_missing = 1)
+	coverage.report(modules, ignore_errors=0, show_missing=1)
 
 
 if __name__ == "__main__":

@@ -7,8 +7,10 @@ import main
 
 import unittest
 
+from unittest import TestCase
+#from testsuite import TestCase # exit on first failure
 
-class dummyTestCase(unittest.TestCase):
+class dummyTestCase(TestCase):
 
 	def setUp(self):
 		pass

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Python test suite
 
@@ -64,6 +66,18 @@ def reportCoverage(modules):
 	"""
 	modules = [__import__(module) for module in modules]
 	coverage.report(modules, ignore_errors=0, show_missing=1)
+
+
+class TestCase(unittest.TestCase):
+	"""
+	alternative test case which aborts after the first failure
+	"""
+
+	def run(self, result=None):
+		if result.failures or result.errors:
+			print "aborted"
+		else:
+			super(TestCase, self).run(result)
 
 
 if __name__ == "__main__":

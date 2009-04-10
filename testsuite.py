@@ -10,9 +10,9 @@ Usage:
 
 TODO:
 * make coverage optional
+* strip .py extension from module names
 * read modules from directory listing
 """
-
 
 import sys
 import unittest

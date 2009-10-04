@@ -22,7 +22,8 @@ import sys
 # <internal functions & classes>
 
 
-def main(args=None):
+def main(args):
+	args = [unicode(arg, "UTF-8") for arg in args]
 	return True
 
 

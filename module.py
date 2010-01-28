@@ -23,7 +23,7 @@ import sys
 
 
 def main(args):
-	args = [unicode(arg, "UTF-8") for arg in args]
+	args = [unicode(arg, "utf-8") for arg in args]
 	return True
 
 

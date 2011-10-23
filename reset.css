@@ -3,6 +3,20 @@
 	padding: 0;
 }
 
+header,
+footer,
+nav,
+section,
+article {
+	display: block; /* required for legacy browsers */
+}
+
+/* cf. http://www.alistapart.com/articles/howtosizetextincss */
+body {
+	font-size: 100%;
+	line-height: 1.125em;
+}
+
 h1, h2, h3, h4, h5, h6,
 p,
 ul, ol, dl,
@@ -11,6 +25,10 @@ pre {
 }
 
 ul, ol {
-	margin-left: 1.5em;
+	margin-left: 1em;
 	list-style-position: outside;
+}
+
+ol {
+	margin-left: 1.5em;
 }

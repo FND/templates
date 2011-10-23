@@ -11,14 +11,19 @@
 			padding: 0;
 		}
 	</style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-	<script src="scripts/main.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		/* ... */
-	</script>
 </head>
 
 <body>
+	<!-- XXX: reference specific jQuery version for caching purposes -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>
+	<script src="scripts/main.js" type="text/javascript"></script>
+	<script type="text/javascript">
+(function($) {
+
+/* ... */
+
+})(jQuery);
+	</script>
 </body>
 
 </html>

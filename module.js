@@ -1,7 +1,9 @@
-/*jslint vars: true, unparam: true, browser: true, white: true */
+/*jslint vars: true */
 /*global jQuery */
 
 MODULE = (function($) {
+
+"use strict";
 
 // ...
 

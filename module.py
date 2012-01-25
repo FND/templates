@@ -4,6 +4,8 @@
 <module description>
 """
 
+from __future__ import absolute_import, division, with_statement
+
 import sys
 
 
